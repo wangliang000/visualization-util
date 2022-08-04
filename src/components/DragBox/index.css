@@ -1,0 +1,9 @@
+.component {
+  width: 100%px;
+  height: 80px;
+  background: fuchsia;
+  cursor: move;
+  text-align: center;
+  line-height: 80px;
+  margin-top: 10px;
+}

@@ -1,0 +1,36 @@
+.left-wrap {
+  display: flex;
+}
+
+.left-bar {
+  width: 40px;
+  height: calc(100vh - 20px);
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-right: 1px solid #000;
+}
+
+.tool {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 30px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.left-component {
+  width: 200px;
+  height: 100vh;
+  border-right: 1px solid #f00;
+}
+
+.left-component-list {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; */
+
+}
