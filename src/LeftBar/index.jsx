@@ -1,13 +1,10 @@
-import React, { memo, useMemo, useRef } from 'react';
+import React, { memo, useMemo } from 'react';
 import DragBox from '../components/DragBox';
-import { useDrop } from 'react-dnd';
 import './index.css';
-import { ItemTypes } from '../constants';
 
 const tools = [{ type: 'component', title: '组件' }];
 
 const LeftBar = ({ box, moveBox }) => {
-  const ref = useRef();
   const renderTools = useMemo(() => {
     return (
       <>
@@ -28,7 +25,14 @@ const LeftBar = ({ box, moveBox }) => {
         <div>组件</div>
         <div className="left-component-list">
           {box.map((b, index) => (
-            <DragBox item={b} key={b.id} index={index} moveBox={moveBox} />
+            <DragBox
+              item={b}
+              action="leftBox"
+              id={b.id}
+              moveBox={moveBox}
+              key={b.id}
+              index={index}
+            />
           ))}
         </div>
         <div>{true ? '可以' : '不可以'}</div>
